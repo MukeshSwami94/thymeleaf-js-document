@@ -1,0 +1,19 @@
+----------------------------------------------------  Onclick function With Parameter ----------------------------------------
+th:onclick="'javascript:addCartRemoveCartProduct(' + ${product.id} + ',' + ${product.id} + ')'"
+th:onclick="@{'addCartRemoveCartProduct(this,\''} + ${product.id} + @{'\' ,\''} + ${product.id} + @{'\')'}"
+
+th:onclick="'doSomething(\''+${val1}+ '\',\''+${val2}+'\',\''+${val3}+'\');'" // pass multiparameter
+
+
+th:oninput="productQtyCalculate([[${productDetail.product}]])" // pass an object
+
+
+
+
+
+//-----------------------server to local date in thymleaf-js -----------------
+<strong th:id="@{date-} + ${orderBean.orderId}" >
+<script  type="text/javascript" th:inline="javascript">
+   document.getElementById("date-"+[[${orderBean.orderId}]]).innerHTML = new Date([[${orderBean.orderAt}]]);
+</script>
+</strong>
