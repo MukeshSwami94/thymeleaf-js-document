@@ -1,0 +1,23 @@
+ Spacified Number in Jstl : 
+
+<c:forEach begin="0" end="10" varStatus="loop">
+    Index: ${loop.index}<br/>
+</c:forEach>
+
+
+
+List : 
+<c:forEach items="${loopableObject}" var="theObject" varStatus="theCount">
+    <div id="${theCount.index}">
+        <span>${theObject}</spna>
+    </div>
+</c:forEach>
+
+
+
+
+
+// For  loop in thymleaf : : start 0 , 5 
+ <th:block th:each="i: ${#numbers.sequence(0, commentsAndReviews.star - 1)}" >
+	<i class="fa fa-star active" aria-hidden="true"></i>
+ </th:block>
